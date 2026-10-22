@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff3f7">
+  <title>Oluwadarasimi Love 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-heart">♡</div>
+      <div class="brand">
+        <h1>Oluwadarasimi Love</h1>
+        <p>Our own little world 💗</p>
+      </div>
+      <button id="logout" class="quiet-button" hidden>Sign out</button>
+    </header>
+
+    <section id="auth" class="auth card">
+      <div class="big-heart">💌</div>
+      <p class="eyebrow">MADE WITH LOVE</p>
+      <h2>Just you and me</h2>
+      <p class="muted">Sign in to enter your private space.</p>
+      <form id="authForm">
+        <label for="email">Email address</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" minlength="6"
+          autocomplete="current-password" required>
+        <button class="primary" type="submit">Sign in 💗</button>
+        <button class="secondary" id="signup" type="button">Create account</button>
+      </form>
+      <p id="authStatus" class="status" role="status"></p>
+    </section>
+
+    <section id="setup" class="setup card" hidden>
+      <h2>Connect your hearts ♡</h2>
+      <p class="muted">Create a private space, or join the one your partner created.</p>
+      <button id="createSpace" class="primary">Create our space</button>
+      <div class="separator">OR JOIN YOUR PARTNER</div>
+      <label for="inviteCode">8-character invite code</label>
+      <input id="inviteCode" maxlength="8" autocomplete="off"
+        placeholder="Enter their code">
+      <button id="joinSpace" class="secondary">Join our space</button>
+      <p id="setupStatus" class="status" role="status"></p>
+    </section>
+
+    <section id="workspace" hidden>
+      <nav class="tabs" aria-label="Main navigation">
+        <button class="tab active" data-tab="feed">♡ Feed</button>
+        <button class="tab" data-tab="chat">♡ Messenger</button>
+      </nav>
+
+      <section id="feedPage" class="page">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">OUR PRIVATE CORNER</p>
+            <h2>Our Feed 💗</h2>
+            <p class="muted">Little moments, kept between us.</p>
+          </div>
+        </div>
+
+        <form id="postForm" class="card composer-card">
+          <label for="postInput">Share a thought or a little moment…</label>
+          <textarea id="postInput" maxlength="2000" rows="3"
+            placeholder="Write something from your heart..." required></textarea>
+          <div class="composer-bottom">
+            <span class="muted">Made with love ♡</span>
+            <button class="primary small" type="submit">Post 💗</button>
+          </div>
+        </form>
+
+        <p id="feedStatus" class="status" role="status"></p>
+        <div id="feedPosts" class="feed-posts">
+          <p class="empty card">Your first shared moment belongs here 💕</p>
+        </div>
+      </section>
+
+      <section id="chatPage" class="page" hidden>
+        <div class="chat card">
+          <header class="chat-header">
+            <div class="avatar">💕</div>
+            <div class="chat-title">
+              <h2>Oluwadarasimi</h2>
+              <p id="chatStatus">Your private conversation</p>
+            </div>
+            <button id="refreshChat" class="icon-button" title="Refresh messages">↻</button>
+          </header>
+
+          <div id="invitePanel" class="invite" hidden>
+            <p>Share this code privately so your partner can join your space.</p>
+            <div class="invite-row">
+              <strong id="inviteCodeDisplay"></strong>
+              <button id="copyInvite" class="secondary small" type="button">Copy code</button>
+            </div>
+          </div>
+
+          <div id="messages" class="messages" aria-live="polite">
+            <p class="empty">Your first love note is waiting 💗</p>
+          </div>
+
+          <form id="messageForm" class="message-form">
+            <textarea id="messageInput" maxlength="2000" rows="1"
+              placeholder="Write something sweet..." aria-label="Message" required></textarea>
+            <button class="send-button" type="submit" aria-label="Send message">➤</button>
+          </form>
+          <p class="chat-footnote">Every little message becomes a memory ♡</p>
+        </div>
+      </section>
+    </section>
+
+    <footer>Made for two hearts, with care ♡</footer>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
